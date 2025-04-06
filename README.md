@@ -2,7 +2,7 @@
 
 ---
 
-# 💫 Project Overview
+# 💫 Project Description
 This project is a comprehensive **video processing and analysis platform** that allows users to upload video files in various languages, extract audio, perform transcription, analyze sentiment and emotions, generate meeting minutes, summaries, and identify individual speakers. It leverages **advanced natural language processing** and **speech recognition models** to deliver powerful insights from spoken content.
 
 ---
