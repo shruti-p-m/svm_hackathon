@@ -3,8 +3,7 @@
 ---
 
 # 💫 Project Overview
-This project is a comprehensive **video processing and analysis platform** that allows users to upload video files in various languages, extract audio, perform transcription, analyze sentiment and emotions, generate meeting minutes, summaries, and identify individual speakers.  
-It leverages **advanced natural language processing** and **speech recognition models** to deliver powerful insights from spoken content.
+This project is a comprehensive **video processing and analysis platform** that allows users to upload video files in various languages, extract audio, perform transcription, analyze sentiment and emotions, generate meeting minutes, summaries, and identify individual speakers. It leverages **advanced natural language processing** and **speech recognition models** to deliver powerful insights from spoken content.
 
 ---
 
@@ -55,7 +54,9 @@ To build an **AI-powered video intelligence tool** that processes multilingual v
 # 🎯 Target User Benefit: Supporting Individuals with Autism or Social Communication Challenges
 
 This platform is particularly valuable for individuals with autism spectrum disorder (ASD) or those who struggle with interpreting social cues and facial expressions. Such individuals often face difficulties in understanding tone, emotion, and sentiment during conversations.  
+
 Our solution provides a clear, AI-generated analysis of each speaker's sentiment and emotional tone, along with accurate transcriptions—either in English or translated from other languages. By analyzing everyday conversations, users can review interactions they found confusing or emotionally ambiguous.  
+
 Whether it's a recorded conversation, a meeting in a noisy environment, or a scenario where they felt unsure of the social dynamics, users can revisit the event and:
 - Review transcripts  
 - Understand speaker’s emotions and sentiments  
