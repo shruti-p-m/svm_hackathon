@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Transcription and Analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Video Transcription and Analysis</h1>
+
+    <form method="POST" action="/" enctype="multipart/form-data">
+      <div class="upload-box" onclick="document.getElementById('fileInput').click();">
+        <p id="fileName">Click to change file</p>
+        <input type="file" id="fileInput" name="file" hidden onchange="showFileName(this)">
+      </div>
+
+      <button type="submit" class="transcribe-btn">Transcribe Video</button>
+    </form>
+
+    {% if video_filename %}
+    <h2>Video Preview with Captions</h2>
+    <video controls>
+      <source src="{{ url_for('uploaded_file', filename=video_filename) }}" type="video/mp4">
+      <track src="{{ url_for('uploaded_file', filename=caption_file) }}" kind="subtitles" srclang="en" label="English" default>
+      Your browser does not support the video tag.
+    </video>
+    {% endif %}
+
+    <div class="tabs">
+      <button class="tab active" onclick="openTab(event, 'transcript')">Transcript</button>
+      <button class="tab" onclick="openTab(event, 'sentiment')">Sentiment</button>
+      <button class="tab" onclick="openTab(event, 'tone')">Tone</button>
+      <button class="tab" onclick="openTab(event, 'minutes')">Minutes</button>
+    </div>
+
+    <div id="transcript" class="tab-content active">
+      <h2>Transcript</h2>
+      {% if caption_text %}
+        <pre>{{ caption_text }}</pre>
+      {% else %}
+        <p>No transcript available.</p>
+      {% endif %}
+    </div>
+
+    <div id="sentiment" class="tab-content">
+      <h2>Sentiment</h2>
+      {% if top_sentiment %}
+        <ul>
+          {% for speaker, sentiment in top_sentiment.items() %}
+            <li><strong>{{ speaker }}</strong>: {{ sentiment.label }} ({{ sentiment.score }})</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No sentiment data available.</p>
+      {% endif %}
+    </div>
+
+    <div id="tone" class="tab-content">
+      <h2>Tone</h2>
+      {% if top_emotion %}
+        <ul>
+          {% for speaker, emotion in top_emotion.items() %}
+            <li><strong>{{ speaker }}</strong>: {{ emotion.label }} ({{ emotion.score }})</li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No tone data available.</p>
+      {% endif %}
+    </div>
+
+    <div id="minutes" class="tab-content">
+      <h2>Meeting Minutes</h2>
+      {% if meeting_minutes %}
+        <pre>{{ meeting_minutes }}</pre>
+        <button class="download-btn">⬇ Download</button>
+      {% else %}
+        <p>No meeting minutes available.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <script>
+    function showFileName(input) {
+      const fileName = input.files[0]?.name || "Click to change file";
+      document.getElementById("fileName").innerText = fileName;
+    }
+
+    function openTab(evt, tabId) {
+      const tabContents = document.querySelectorAll(".tab-content");
+      const tabButtons = document.querySelectorAll(".tab");
+
+      tabContents.forEach(content => content.classList.remove("active"));
+      tabButtons.forEach(button => button.classList.remove("active"));
+
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
