@@ -116,3 +116,7 @@ To use the gated Hugging Face model `pyannote/speaker-diarization-3.1`, you need
 - Currently, we have tested 3 languages other than English mainly: Spanish, Italian, and Hindi. For future work, we plan on incorporating even more languages for our prototype and plan to make it vastly available.  
 - Real-time transcription and analysis
 - Enhanced speaker identification with names
+
+---
+
+[🎬 Click here to watch the demo video](/Bibble_Demo.mp4)
