@@ -55,7 +55,7 @@ To build an **AI-powered video intelligence tool** that processes multilingual v
 
 This platform is particularly valuable for individuals with autism spectrum disorder (ASD) or those who struggle with interpreting social cues and facial expressions. Such individuals often face difficulties in understanding tone, emotion, and sentiment during conversations.  
 
-Our solution provides a clear, AI-generated analysis of each speaker's sentiment and emotional tone, along with accurate transcriptions—either in English or translated from other languages. By analyzing everyday conversations, users can review interactions they found confusing or emotionally ambiguous.  
+Our solution provides a clear, AI-generated analysis of each speaker's sentiment and emotional tone, along with accurate transcriptions, either in English or translated from other languages. By analyzing everyday conversations, users can review interactions they found confusing or emotionally ambiguous.  
 
 Whether it's a recorded conversation, a meeting in a noisy environment, or a scenario where they felt unsure of the social dynamics, users can revisit the event and:
 - Review transcripts  
